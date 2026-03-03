@@ -27,8 +27,9 @@ jobs:
 
       - name: Setup SSH key
         run: |
-          install -m 600 /dev/null ~/.ssh/deploy_key
+          mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -T 10 -p 65002 45.132.157.22 >> ~/.ssh/known_hosts 2>/dev/null || true
 
       - name: Deploy to Hostinger via SSH
