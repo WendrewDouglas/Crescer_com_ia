@@ -25,12 +25,16 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: 45.132.157.22
-          username: u879090414
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./out/
-          server-dir: ./
-          dangerous-clean-slate: true
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p 65002 45.132.157.22 >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Deploy to Hostinger via SSH
+        run: |
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/deploy_key -p 65002" \
+            ./out/ \
+            u879090414@45.132.157.22:~/public_html/
