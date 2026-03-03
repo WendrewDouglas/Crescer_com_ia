@@ -15,7 +15,11 @@ export default function FAQ() {
           subtitle="Tudo o que você precisa saber sobre nossos cursos de IA para crianças e adolescentes."
         />
 
-        <div className="mx-auto max-w-3xl">
+        <div
+          className="mx-auto max-w-3xl"
+          itemScope
+          itemType="https://schema.org/FAQPage"
+        >
           {FAQ_ITEMS.map((item) => (
             <AccordionItem
               key={item.question}

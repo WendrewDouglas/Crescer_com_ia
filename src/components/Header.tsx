@@ -35,7 +35,7 @@ export default function Header() {
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav aria-label="Navegação principal" className="hidden items-center gap-8 md:flex">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
@@ -56,7 +56,8 @@ export default function Header() {
           <button
             className="cursor-pointer md:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Menu"
+            aria-label="Menu de navegação"
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? (
               <X className={`h-6 w-6 ${scrolled ? "text-foreground" : "text-white"}`} />
@@ -68,7 +69,7 @@ export default function Header() {
 
         {/* Mobile Nav */}
         {mobileOpen && (
-          <nav className="flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-xl md:hidden">
+          <nav aria-label="Menu de navegação" className="flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-xl md:hidden">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}

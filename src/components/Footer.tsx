@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
 
           {/* Navigation */}
-          <div>
+          <nav aria-label="Links do rodapé">
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
               Navegação
             </h4>
@@ -35,10 +35,10 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Courses */}
-          <div>
+          <nav aria-label="Cursos disponíveis">
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
               Cursos
             </h4>
@@ -51,7 +51,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Contact */}
           <div>
