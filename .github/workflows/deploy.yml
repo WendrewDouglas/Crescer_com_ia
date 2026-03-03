@@ -27,14 +27,13 @@ jobs:
 
       - name: Setup SSH key
         run: |
-          mkdir -p ~/.ssh
+          install -m 600 /dev/null ~/.ssh/deploy_key
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -p 65002 45.132.157.22 >> ~/.ssh/known_hosts 2>/dev/null
+          ssh-keyscan -T 10 -p 65002 45.132.157.22 >> ~/.ssh/known_hosts 2>/dev/null || true
 
       - name: Deploy to Hostinger via SSH
         run: |
           rsync -avz --delete \
-            -e "ssh -i ~/.ssh/deploy_key -p 65002" \
+            -e "ssh -i ~/.ssh/deploy_key -p 65002 -o StrictHostKeyChecking=no" \
             ./out/ \
             u879090414@45.132.157.22:~/public_html/
