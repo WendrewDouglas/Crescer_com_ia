@@ -1,0 +1,37 @@
+import { MessageCircle } from "lucide-react";
+import Container from "@/components/ui/Container";
+import Button from "@/components/ui/Button";
+import { WHATSAPP_URL } from "@/lib/constants";
+
+export default function CTA() {
+  return (
+    <section className="gradient-cta relative overflow-hidden py-20 sm:py-28">
+      {/* Decorative circles */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-20 -right-20 h-80 w-80 rounded-full bg-white/5" />
+        <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-white/5" />
+      </div>
+
+      <Container className="relative text-center">
+        <h2 className="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
+          O futuro começa agora.
+          <br />
+          <span className="text-cta">Inscreva seu filho.</span>
+        </h2>
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-white/80">
+          Garanta a vaga do seu filho em um dos nossos cursos presenciais de
+          Inteligência Artificial. Turmas com vagas limitadas!
+        </p>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <Button href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            Quero Matricular
+          </Button>
+          <Button href={WHATSAPP_URL} variant="outline" target="_blank" rel="noopener noreferrer">
+            <MessageCircle className="h-5 w-5" />
+            Falar no WhatsApp
+          </Button>
+        </div>
+      </Container>
+    </section>
+  );
+}
