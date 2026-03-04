@@ -1,9 +1,9 @@
-import { COURSES, TESTIMONIALS, FAQ_ITEMS, CONTACT } from "./constants";
+import { TESTIMONIALS, FAQ_ITEMS, CONTACT } from "./constants";
 
 const SITE_URL = "https://crescercomia.com.br";
 const SITE_NAME = "Crescer com IA";
 const SITE_DESCRIPTION =
-  "Cursos presenciais de Inteligência Artificial para crianças e adolescentes de 7 a 17 anos. Metodologia prática, criativa e segura. Prepare seu filho para o futuro!";
+  "Curso presencial de Inteligência Artificial para crianças e adolescentes de 9 a 14 anos em Araçatuba e região. Metodologia prática, ética e criativa. Prepare seu filho para o futuro!";
 
 /* ───── WebSite ───── */
 export function getWebSiteSchema() {
@@ -35,8 +35,13 @@ export function getOrganizationSchema() {
     telephone: `+${CONTACT.whatsapp}`,
     address: {
       "@type": "PostalAddress",
-      streetAddress: CONTACT.address,
+      addressLocality: "Araçatuba",
+      addressRegion: "SP",
       addressCountry: "BR",
+    },
+    areaServed: {
+      "@type": "City",
+      name: "Araçatuba",
     },
     sameAs: [CONTACT.instagram],
     contactPoint: {
@@ -64,54 +69,50 @@ export function getFAQPageSchema() {
   };
 }
 
-/* ───── Course (x3) ───── */
-function parseDurationMonths(duration: string): string {
-  const match = duration.match(/(\d+)/);
-  const months = match ? parseInt(match[1], 10) : 3;
-  return `P${months}M`;
-}
-
-function parseAgeRange(ageRange: string): { min: number; max: number } {
-  const match = ageRange.match(/(\d+)\s*-\s*(\d+)/);
-  return match
-    ? { min: parseInt(match[1], 10), max: parseInt(match[2], 10) }
-    : { min: 7, max: 17 };
-}
-
-export function getCoursesSchema() {
-  return COURSES.map((course) => {
-    const age = parseAgeRange(course.ageRange);
-    return {
-      "@context": "https://schema.org",
-      "@type": "Course",
-      name: course.title,
-      description: course.description,
-      provider: {
-        "@type": "EducationalOrganization",
-        name: SITE_NAME,
-        url: SITE_URL,
+/* ───── Course ───── */
+export function getCourseSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Crescer com IA — Programa de Inteligência Artificial",
+    description:
+      "Programa presencial de formação em Inteligência Artificial para crianças e adolescentes de 9 a 14 anos. Metodologia prática, ética e criativa.",
+    provider: {
+      "@type": "EducationalOrganization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "onsite",
+      inLanguage: "pt-BR",
+      location: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Araçatuba",
+          addressRegion: "SP",
+          addressCountry: "BR",
+        },
       },
-      hasCourseInstance: {
-        "@type": "CourseInstance",
-        courseMode: "onsite",
-        courseWorkload: parseDurationMonths(course.duration),
-        inLanguage: "pt-BR",
-      },
-      audience: {
-        "@type": "EducationalAudience",
-        educationalRole: "student",
-        audienceType: `Crianças e adolescentes de ${course.ageRange}`,
-        requiredMinAge: age.min,
-        requiredMaxAge: age.max,
-      },
-      syllabusSections: course.topics.map((topic) => ({
-        "@type": "Syllabus",
-        name: topic,
-      })),
-      educationalLevel: course.ageRange,
-      isAccessibleForFree: false,
-    };
-  });
+    },
+    audience: {
+      "@type": "EducationalAudience",
+      educationalRole: "student",
+      audienceType: "Crianças e adolescentes de 9 a 14 anos",
+      requiredMinAge: 9,
+      requiredMaxAge: 14,
+    },
+    syllabusSections: [
+      { "@type": "Syllabus", name: "Como funciona a Inteligência Artificial" },
+      { "@type": "Syllabus", name: "Ferramentas de IA para criar projetos" },
+      { "@type": "Syllabus", name: "Pensamento crítico e resolução de problemas" },
+      { "@type": "Syllabus", name: "Pesquisa com responsabilidade" },
+      { "@type": "Syllabus", name: "Criatividade e autonomia digital" },
+    ],
+    educationalLevel: "9-14 anos",
+    isAccessibleForFree: false,
+  };
 }
 
 /* ───── AggregateRating + Reviews ───── */
@@ -166,7 +167,7 @@ export function getWebPageSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: `${SITE_NAME} — Cursos de Inteligência Artificial para Crianças e Adolescentes`,
+    name: `${SITE_NAME} — Curso de Inteligência Artificial para Crianças e Adolescentes`,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     inLanguage: "pt-BR",
@@ -177,12 +178,41 @@ export function getWebPageSchema() {
     },
     about: {
       "@type": "Thing",
-      name: "Cursos de Inteligência Artificial para Crianças",
+      name: "Curso de Inteligência Artificial para Crianças em Araçatuba",
     },
     mainEntity: {
       "@type": "EducationalOrganization",
       name: SITE_NAME,
     },
+  };
+}
+
+/* ───── LocalBusiness (novo — SEO local para Araçatuba) ───── */
+export function getLocalBusinessSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
+    description: SITE_DESCRIPTION,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Araçatuba",
+      addressRegion: "SP",
+      addressCountry: "BR",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "-21.2089",
+      longitude: "-50.4328",
+    },
+    areaServed: [
+      { "@type": "City", name: "Araçatuba" },
+      { "@type": "City", name: "Birigui" },
+      { "@type": "City", name: "Penápolis" },
+    ],
+    priceRange: "$$",
   };
 }
 
@@ -192,9 +222,10 @@ export function getAllSchemas() {
     getWebSiteSchema(),
     getOrganizationSchema(),
     getFAQPageSchema(),
-    ...getCoursesSchema(),
+    getCourseSchema(),
     getReviewSchema(),
     getBreadcrumbSchema(),
     getWebPageSchema(),
+    getLocalBusinessSchema(),
   ];
 }

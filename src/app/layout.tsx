@@ -27,25 +27,29 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
-    default: "Crescer com IA — Cursos de Inteligência Artificial para Crianças e Adolescentes",
+    default:
+      "Crescer com IA — Curso de Inteligência Artificial para Crianças em Araçatuba",
     template: "%s | Crescer com IA",
   },
 
   description:
-    "Cursos presenciais de Inteligência Artificial para crianças e adolescentes de 7 a 17 anos. Metodologia prática, criativa e segura. Prepare seu filho para o futuro!",
+    "Curso presencial de Inteligência Artificial para crianças e adolescentes de 9 a 14 anos em Araçatuba e região. Metodologia prática, ética e criativa. Prepare seu filho para o futuro!",
 
   keywords: [
-    "cursos de IA para crianças",
-    "inteligência artificial para adolescentes",
-    "cursos presenciais de IA",
+    "curso de IA para crianças",
+    "inteligência artificial para crianças",
+    "curso de tecnologia Araçatuba",
+    "IA para adolescentes",
+    "curso presencial de IA",
     "educação tecnológica infantil",
     "crescer com IA",
     "aulas de inteligência artificial",
-    "curso de tecnologia para crianças",
+    "curso de tecnologia para crianças Araçatuba",
     "IA para jovens",
     "programação para crianças",
-    "machine learning para adolescentes",
-    "curso de robótica e IA",
+    "educação digital Araçatuba",
+    "curso de IA Araçatuba",
+    "tecnologia para crianças",
     "educação STEM Brasil",
   ],
 
@@ -66,9 +70,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Crescer com IA — Cursos de IA para Crianças e Adolescentes",
+    title: "Crescer com IA — Curso de IA para Crianças em Araçatuba",
     description:
-      "Cursos presenciais que ensinam Inteligência Artificial de forma prática, criativa e segura para crianças e adolescentes de 7 a 17 anos.",
+      "Curso presencial que ensina Inteligência Artificial de forma prática, ética e criativa para crianças e adolescentes de 9 a 14 anos em Araçatuba e região.",
     type: "website",
     locale: "pt_BR",
     url: SITE_URL,
@@ -78,16 +82,16 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Crescer com IA — Cursos de Inteligência Artificial para Crianças e Adolescentes",
+        alt: "Crescer com IA — Curso de Inteligência Artificial para Crianças e Adolescentes",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Crescer com IA — Cursos de IA para Crianças e Adolescentes",
+    title: "Crescer com IA — Curso de IA para Crianças em Araçatuba",
     description:
-      "Cursos presenciais que ensinam Inteligência Artificial de forma prática, criativa e segura para crianças e adolescentes de 7 a 17 anos.",
+      "Curso presencial que ensina Inteligência Artificial de forma prática, ética e criativa para crianças e adolescentes de 9 a 14 anos.",
     images: ["/og-image.jpg"],
   },
 
@@ -107,11 +111,6 @@ export const metadata: Metadata = {
   },
 
   manifest: "/manifest.json",
-
-  // TODO: Add Google Search Console verification code
-  // verification: {
-  //   google: "YOUR_GOOGLE_VERIFICATION_CODE",
-  // },
 };
 
 export default function RootLayout({
@@ -123,7 +122,9 @@ export default function RootLayout({
 
   return (
     <html lang="pt-BR">
-      <body className={`${jakarta.variable} ${spaceGrotesk.variable} antialiased`}>
+      <body
+        className={`${jakarta.variable} ${spaceGrotesk.variable} antialiased`}
+      >
         {children}
         {schemas.map((schema, i) => (
           <script
