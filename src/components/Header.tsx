@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, Brain } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { NAV_LINKS, WHATSAPP_URL } from "@/lib/constants";
@@ -25,13 +25,15 @@ export default function Header() {
       <Container>
         <div className="flex h-16 items-center justify-between sm:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className={`flex h-9 w-9 items-center justify-center rounded-lg ${scrolled ? "bg-primary" : "bg-white/20"}`}>
-              <Brain className={`h-5 w-5 ${scrolled ? "text-white" : "text-white"}`} />
-            </div>
-            <span className={`text-lg font-bold ${scrolled ? "text-foreground" : "text-white"}`}>
-              Crescer com IA
-            </span>
+          <a href="#" className="flex items-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo-horizontal.jpeg"
+              alt="Crescer com IA"
+              width={160}
+              height={53}
+              className={`rounded transition-all duration-300 ${scrolled ? "" : "brightness-0 invert"}`}
+            />
           </a>
 
           {/* Desktop Nav */}

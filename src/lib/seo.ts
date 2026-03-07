@@ -43,7 +43,7 @@ export function getOrganizationSchema() {
       "@type": "City",
       name: "Araçatuba",
     },
-    sameAs: [CONTACT.instagram],
+    sameAs: ["https://instagram.com/crescercom.ia"],
     contactPoint: {
       "@type": "ContactPoint",
       telephone: `+${CONTACT.whatsapp}`,

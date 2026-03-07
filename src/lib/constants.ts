@@ -263,10 +263,11 @@ export const FOOTER_TAGLINE =
 
 /* ───── Contact ───── */
 export const CONTACT = {
-  whatsapp: "5500000000000",
-  whatsappDisplay: "(00) 00000-0000",
+  whatsapp: "5518998266162",
+  whatsappDisplay: "(18) 99826-6162",
   email: "contato@crescercomia.com.br",
-  instagram: "https://instagram.com/crescercomia",
+  instagram: "https://instagram.com/crescercom.ia",
+  instagramHandle: "@crescercom.ia",
   address: "Araçatuba, SP",
 };
 

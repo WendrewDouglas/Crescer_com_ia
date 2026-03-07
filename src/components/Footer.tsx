@@ -1,4 +1,4 @@
-import { Brain, Mail, Phone, MapPin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { NAV_LINKS, CONTACT, WHATSAPP_URL, FOOTER_TAGLINE } from "@/lib/constants";
 
@@ -9,11 +9,15 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
           <div>
-            <a href="#" className="mb-4 flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-                <Brain className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-lg font-bold text-white">Crescer com IA</span>
+            <a href="#" className="mb-4 inline-block">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo-horizontal.jpeg"
+                alt="Crescer com IA"
+                width={180}
+                height={60}
+                className="rounded"
+              />
             </a>
             <p className="mt-2 text-sm leading-relaxed">{FOOTER_TAGLINE}</p>
           </div>
@@ -71,7 +75,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="transition-colors hover:text-white"
                 >
-                  @crescercomia
+                  {CONTACT.instagramHandle}
                 </a>
               </li>
               <li className="flex items-start gap-2 text-sm">
