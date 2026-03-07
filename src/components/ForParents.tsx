@@ -17,7 +17,7 @@ export default function ForParents() {
             {FOR_PARENTS.questions.map((q) => (
               <div
                 key={q}
-                className="flex items-start gap-3 rounded-xl border border-border bg-white p-5 text-left shadow-sm"
+                className="flex items-start gap-3 rounded-xl border border-border bg-background p-5 text-left shadow-sm"
               >
                 <MessageCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                 <p className="text-lg text-muted-foreground italic">{q}</p>

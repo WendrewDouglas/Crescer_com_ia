@@ -17,7 +17,7 @@ export default function Methodology() {
             {METHODOLOGY.items.map((item) => (
               <li
                 key={item}
-                className="flex items-start gap-3 rounded-xl border border-border bg-white p-4 shadow-sm"
+                className="flex items-start gap-3 rounded-xl border border-border bg-background p-4 shadow-sm"
               >
                 <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                 <span className="text-lg text-foreground">{item}</span>

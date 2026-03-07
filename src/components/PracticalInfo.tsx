@@ -22,7 +22,7 @@ export default function PracticalInfo() {
         />
 
         <div className="mx-auto max-w-xl">
-          <div className="rounded-2xl border border-border bg-white p-8 shadow-md">
+          <div className="rounded-2xl border border-border bg-background p-8 shadow-md">
             <ul className="space-y-5">
               {PRACTICAL_INFO.items.map((item) => {
                 const Icon = iconMap[item.icon];

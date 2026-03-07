@@ -17,7 +17,7 @@ export default function Testimonials() {
           {TESTIMONIALS.map((t) => (
             <div
               key={t.name}
-              className="rounded-2xl border border-border bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+              className="rounded-2xl border border-border bg-background p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
               <Quote className="mb-4 h-8 w-8 text-primary/30" />
               <p className="mb-6 text-sm leading-relaxed text-muted-foreground italic">

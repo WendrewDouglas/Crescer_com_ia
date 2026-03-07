@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/95 shadow-md backdrop-blur-md" : "bg-transparent"
+        scrolled ? "bg-[#f7f7f7]/95 shadow-md backdrop-blur-md" : "bg-transparent"
       }`}
     >
       <Container>
@@ -71,7 +71,7 @@ export default function Header() {
 
         {/* Mobile Nav */}
         {mobileOpen && (
-          <nav aria-label="Menu de navegação" className="flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-xl md:hidden">
+          <nav aria-label="Menu de navegação" className="flex flex-col gap-4 rounded-2xl bg-background p-6 shadow-xl md:hidden">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}

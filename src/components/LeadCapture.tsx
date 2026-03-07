@@ -7,7 +7,7 @@ export default function LeadCapture() {
   return (
     <section className="bg-muted py-20 sm:py-28">
       <Container>
-        <div className="mx-auto max-w-2xl rounded-2xl border border-primary/20 bg-white p-8 text-center shadow-lg sm:p-12">
+        <div className="mx-auto max-w-2xl rounded-2xl border border-primary/20 bg-background p-8 text-center shadow-lg sm:p-12">
           <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
             <Download className="h-8 w-8 text-primary" />
           </div>

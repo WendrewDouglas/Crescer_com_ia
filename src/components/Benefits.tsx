@@ -17,7 +17,7 @@ export default function Benefits() {
             return (
               <div
                 key={area.title}
-                className="group rounded-2xl border border-border bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                className="group rounded-2xl border border-border bg-background p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
               >
                 <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary">
                   <Icon className="h-7 w-7 text-primary transition-colors group-hover:text-white" />
