@@ -32,7 +32,7 @@ export default function Header() {
               alt="Crescer com IA"
               width={160}
               height={53}
-              className={`rounded transition-all duration-300 ${scrolled ? "" : "brightness-0 invert"}`}
+              className="rounded transition-all duration-300"
             />
           </a>
 
