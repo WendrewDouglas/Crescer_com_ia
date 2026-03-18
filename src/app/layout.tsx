@@ -28,29 +28,28 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "Crescer com IA — Curso de Inteligência Artificial para Crianças em Araçatuba",
+      "Crescer com IA | Curso de Inteligência Artificial para Crianças em Araçatuba",
     template: "%s | Crescer com IA",
   },
 
   description:
-    "Curso presencial de Inteligência Artificial para crianças e adolescentes de 9 a 14 anos em Araçatuba e região. Metodologia prática, ética e criativa. Prepare seu filho para o futuro!",
+    "Curso presencial de Inteligência Artificial para crianças de 7 a 12 anos em Araçatuba e região. Metodologia prática, criativa e segura. Prepare seu filho para o futuro!",
 
   keywords: [
     "curso de IA para crianças",
     "inteligência artificial para crianças",
     "curso de tecnologia Araçatuba",
-    "IA para adolescentes",
     "curso presencial de IA",
     "educação tecnológica infantil",
     "crescer com IA",
     "aulas de inteligência artificial",
     "curso de tecnologia para crianças Araçatuba",
-    "IA para jovens",
     "programação para crianças",
     "educação digital Araçatuba",
     "curso de IA Araçatuba",
     "tecnologia para crianças",
     "educação STEM Brasil",
+    "IA para crianças 7 a 12 anos",
   ],
 
   alternates: {
@@ -70,9 +69,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Crescer com IA — Curso de IA para Crianças em Araçatuba",
+    title: "Crescer com IA | Curso de IA para Crianças em Araçatuba",
     description:
-      "Curso presencial que ensina Inteligência Artificial de forma prática, ética e criativa para crianças e adolescentes de 9 a 14 anos em Araçatuba e região.",
+      "Curso presencial que ensina Inteligência Artificial de forma prática, criativa e segura para crianças de 7 a 12 anos em Araçatuba e região.",
     type: "website",
     locale: "pt_BR",
     url: SITE_URL,
@@ -82,16 +81,16 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Crescer com IA — Curso de Inteligência Artificial para Crianças e Adolescentes",
+        alt: "Crescer com IA | Curso de Inteligência Artificial para Crianças",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Crescer com IA — Curso de IA para Crianças em Araçatuba",
+    title: "Crescer com IA | Curso de IA para Crianças em Araçatuba",
     description:
-      "Curso presencial que ensina Inteligência Artificial de forma prática, ética e criativa para crianças e adolescentes de 9 a 14 anos.",
+      "Curso presencial que ensina Inteligência Artificial de forma prática, criativa e segura para crianças de 7 a 12 anos.",
     images: ["/og-image.jpg"],
   },
 

@@ -12,7 +12,7 @@ export default function Footer() {
             <a href="#" className="mb-4 inline-block">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/logo-horizontal.jpeg"
+                src="/logo-horizontal.webp"
                 alt="Crescer com IA"
                 width={180}
                 height={60}
@@ -87,6 +87,14 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm">
+          <div className="mb-2">
+            <a
+              href="/privacidade"
+              className="transition-colors hover:text-white"
+            >
+              Política de Privacidade
+            </a>
+          </div>
           &copy; {new Date().getFullYear()} Crescer com IA. Todos os direitos
           reservados.
         </div>

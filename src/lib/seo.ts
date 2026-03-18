@@ -3,7 +3,7 @@ import { TESTIMONIALS, FAQ_ITEMS, CONTACT } from "./constants";
 const SITE_URL = "https://crescercomia.com.br";
 const SITE_NAME = "Crescer com IA";
 const SITE_DESCRIPTION =
-  "Curso presencial de Inteligência Artificial para crianças e adolescentes de 9 a 14 anos em Araçatuba e região. Metodologia prática, ética e criativa. Prepare seu filho para o futuro!";
+  "Curso presencial de Inteligência Artificial para crianças de 7 a 12 anos em Araçatuba e região. Metodologia prática, criativa e segura. Prepare seu filho para o futuro!";
 
 /* ───── WebSite ───── */
 export function getWebSiteSchema() {
@@ -74,9 +74,9 @@ export function getCourseSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Course",
-    name: "Crescer com IA — Programa de Inteligência Artificial",
+    name: "Crescer com IA | Programa de Inteligência Artificial para Crianças",
     description:
-      "Programa presencial de formação em Inteligência Artificial para crianças e adolescentes de 9 a 14 anos. Metodologia prática, ética e criativa.",
+      "Programa presencial de Inteligência Artificial para crianças de 7 a 12 anos. Metodologia prática, criativa e segura.",
     provider: {
       "@type": "EducationalOrganization",
       name: SITE_NAME,
@@ -99,9 +99,9 @@ export function getCourseSchema() {
     audience: {
       "@type": "EducationalAudience",
       educationalRole: "student",
-      audienceType: "Crianças e adolescentes de 9 a 14 anos",
-      requiredMinAge: 9,
-      requiredMaxAge: 14,
+      audienceType: "Crianças de 7 a 12 anos",
+      requiredMinAge: 7,
+      requiredMaxAge: 12,
     },
     syllabusSections: [
       { "@type": "Syllabus", name: "Como funciona a Inteligência Artificial" },
@@ -110,7 +110,7 @@ export function getCourseSchema() {
       { "@type": "Syllabus", name: "Pesquisa com responsabilidade" },
       { "@type": "Syllabus", name: "Criatividade e autonomia digital" },
     ],
-    educationalLevel: "9-14 anos",
+    educationalLevel: "7-12 anos",
     isAccessibleForFree: false,
   };
 }
@@ -167,7 +167,7 @@ export function getWebPageSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: `${SITE_NAME} — Curso de Inteligência Artificial para Crianças e Adolescentes`,
+    name: `${SITE_NAME} | Curso de Inteligência Artificial para Crianças`,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     inLanguage: "pt-BR",
@@ -187,7 +187,7 @@ export function getWebPageSchema() {
   };
 }
 
-/* ───── LocalBusiness (novo — SEO local para Araçatuba) ───── */
+/* ───── LocalBusiness (SEO local para Araçatuba) ───── */
 export function getLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",

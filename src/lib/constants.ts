@@ -17,45 +17,45 @@ export const NAV_LINKS = [
 
 /* ───── Hero ───── */
 export const HERO = {
-  headline: "Seu filho já vive na era da Inteligência Artificial.",
-  subheadline: "A pergunta é: ele está preparado para ela?",
+  headline: "Seu filho já usa Inteligência Artificial todos os dias.",
+  subheadline: "Mas será que ele sabe o que está fazendo?",
   paragraphs: [
-    "A IA já está nos jogos, nas redes sociais, nas pesquisas escolares e nos aplicativos que as crianças usam todos os dias.",
-    "Mas aprender a usar não é o mesmo que entender.",
-    "Sem orientação, a tecnologia pode gerar dependência. Com direcionamento, ela desenvolve autonomia, criatividade e protagonismo.",
+    "Quando seu filho pesquisa no Google, pede ajuda pro assistente de voz ou joga online, ele já está usando IA. Isso acontece nos jogos, nas redes sociais e até nos trabalhos da escola.",
+    "Só que usar não é a mesma coisa que entender.",
+    "Quando a criança entende como a tecnologia funciona, ela deixa de ser apenas consumidora e passa a criar, questionar e tomar decisões melhores.",
   ],
-  cta: "A Crescer com IA nasceu para ensinar crianças a dominar a tecnologia — e não serem dominadas por ela.",
+  cta: "A Crescer com IA ensina crianças a usar a tecnologia a favor delas, com segurança, criatividade e pensamento crítico.",
 };
 
 /* ───── About ───── */
 export const ABOUT = {
   eyebrow: "O que é a Crescer com IA",
-  title: "Muito mais que um curso de tecnologia.",
+  title: "Vai muito além de um curso de computação.",
   description:
-    "Somos um programa presencial de formação para crianças e adolescentes que desejam aprender a usar Inteligência Artificial de forma prática, ética e criativa.",
+    "A Crescer com IA é um programa presencial feito especialmente para crianças de 7 a 12 anos. Aqui, seu filho aprende a usar Inteligência Artificial de um jeito prático, divertido e seguro.",
   checklist: [
-    "Como funciona a Inteligência Artificial",
-    "Como usar ferramentas de IA para criar projetos",
-    "Como desenvolver pensamento crítico",
-    "Como pesquisar com responsabilidade",
-    "Como transformar curiosidade em habilidade",
+    "O que é Inteligência Artificial e como ela funciona no dia a dia",
+    "Como usar ferramentas de IA para criar projetos legais",
+    "Como pensar de forma crítica antes de acreditar em tudo que vê na internet",
+    "Como pesquisar de verdade, com responsabilidade",
+    "Como transformar curiosidade em habilidades que vão fazer diferença",
   ],
-  closing: "Tudo isso em um ambiente seguro, supervisionado e estimulante.",
+  closing: "Tudo isso num ambiente acolhedor, com acompanhamento de perto e muita mão na massa.",
 };
 
 /* ───── Methodology ───── */
 export const METHODOLOGY = {
   eyebrow: "Como Funciona",
-  title: "Metodologia prática e vivencial",
+  title: "Aprender fazendo, do jeito que criança gosta",
   items: [
-    "Aulas presenciais semanais",
-    "Turmas reduzidas",
-    "Projetos práticos com ferramentas reais de IA",
-    "Desenvolvimento de criatividade e resolução de problemas",
-    "Acompanhamento próximo e orientado",
+    "Aulas presenciais toda semana, com atividades práticas",
+    "Turmas pequenas pra cada criança ter atenção de verdade",
+    "Projetos mão na massa usando ferramentas reais de IA",
+    "Atividades que estimulam a criatividade e a resolução de problemas",
+    "Acompanhamento próximo do progresso de cada aluno",
   ],
   closing:
-    "Cada encontro é pensado para estimular o raciocínio, a expressão e a autonomia digital da criança.",
+    "Cada encontro é pensado pra fazer a criança pensar, criar e se divertir aprendendo. Sem decoreba, sem tédio.",
 };
 
 /* ───── Development Areas (replaces Benefits) ───── */
@@ -69,100 +69,100 @@ export interface DevelopmentArea {
 export const DEVELOPMENT_AREAS: DevelopmentArea[] = [
   {
     icon: Brain,
-    title: "Cognitivo",
-    label: "Cognitivo",
+    title: "Raciocínio",
+    label: "Raciocínio",
     description:
-      "Raciocínio lógico, pensamento crítico e capacidade de resolver problemas.",
+      "Seu filho aprende a pensar com lógica, resolver problemas e tomar decisões com mais clareza.",
   },
   {
     icon: Palette,
-    title: "Criativo",
-    label: "Criativo",
+    title: "Criatividade",
+    label: "Criatividade",
     description:
-      "Criação de textos, imagens, ideias e projetos usando Inteligência Artificial.",
+      "Ele vai criar textos, imagens e projetos usando Inteligência Artificial como ferramenta criativa.",
   },
   {
     icon: Heart,
-    title: "Emocional",
-    label: "Emocional",
+    title: "Consciência digital",
+    label: "Consciência digital",
     description:
-      "Uso consciente da tecnologia, equilíbrio digital e responsabilidade online.",
+      "Aprende a usar a tecnologia com equilíbrio, sem exageros, entendendo o que é saudável e o que não é.",
   },
   {
     icon: Rocket,
-    title: "Futuro",
-    label: "Futuro",
+    title: "Preparo pro futuro",
+    label: "Preparo pro futuro",
     description:
-      "Base sólida para carreiras e oportunidades que já estão surgindo.",
+      "Desenvolve habilidades que já estão sendo pedidas no mercado de trabalho e que vão fazer diferença lá na frente.",
   },
 ];
 
 export const DEVELOPMENT_CLOSING =
-  "Porque ensinar IA não é sobre formar programadores. É sobre formar crianças preparadas para o mundo real.";
+  "Não é sobre formar programadores. É sobre preparar crianças espertas, criativas e prontas pro mundo que já mudou.";
 
 /* ───── Why Early ───── */
 export const WHY_EARLY = {
-  eyebrow: "Por que ensinar IA desde cedo?",
-  title: "O mundo mudou.",
+  eyebrow: "Por que começar agora?",
+  title: "O mundo dos nossos filhos já é diferente do nosso.",
   changes: [
-    "As profissões estão mudando.",
-    "A forma de aprender está mudando.",
-    "A maneira de pensar está mudando.",
+    "As profissões que eles vão ter talvez nem existam ainda.",
+    "A forma de aprender mudou e vai continuar mudando.",
+    "Saber lidar com tecnologia virou tão importante quanto saber ler e escrever.",
   ],
   intro:
-    "Crianças que aprendem desde cedo a usar tecnologia com consciência:",
+    "Crianças que aprendem cedo a usar tecnologia com consciência:",
   benefits: [
-    "Desenvolvem mais autonomia",
-    "Têm mais segurança digital",
-    "Aprendem a questionar e não apenas consumir",
-    "Se tornam mais criativas e inovadoras",
+    "Ficam mais independentes e seguras no mundo digital",
+    "Sabem separar o que é confiável do que não é",
+    "Aprendem a questionar em vez de só aceitar",
+    "Desenvolvem mais criatividade e capacidade de inovar",
   ],
-  closing: "E isso começa agora.",
+  closing: "Quanto antes esse aprendizado começa, mais natural ele se torna.",
 };
 
 /* ───── Difference ───── */
 export const DIFFERENCE = {
   eyebrow: "Nossa Diferença",
-  title: "Tecnologia com propósito.",
+  title: "Tecnologia com propósito, não por modismo.",
   description:
-    "Na Crescer com IA, não ensinamos apenas ferramentas. Ensinamos valores, responsabilidade e pensamento.",
-  commitmentIntro: "Nosso compromisso é equilibrar:",
+    "Na Crescer com IA, a gente não ensina só a mexer em ferramentas. A gente ensina a pensar, a criar e a usar a tecnologia com responsabilidade.",
+  commitmentIntro: "Nosso compromisso com seu filho:",
   commitments: [
-    "Inovação",
-    "Desenvolvimento humano",
-    "Segurança",
-    "Educação prática",
+    "Inovação que faz sentido pra idade dele",
+    "Desenvolvimento humano em primeiro lugar",
+    "Segurança em tudo que ele faz no digital",
+    "Aprendizado prático, que ele leva pra vida",
   ],
   closing:
-    "Porque o futuro precisa de crianças inteligentes — mas também conscientes.",
+    "Porque o futuro precisa de crianças inteligentes, mas, acima de tudo, conscientes.",
 };
 
 /* ───── For Parents ───── */
 export const FOR_PARENTS = {
-  eyebrow: "Para os Pais",
-  title: "Sabemos que muitos pais se perguntam:",
+  eyebrow: "Direto com Você, Pai e Mãe",
+  title: "A gente sabe que você pode estar pensando:",
   questions: [
-    '"Não é cedo demais para aprender IA?"',
-    '"Meu filho vai passar ainda mais tempo na frente da tela?"',
+    '"Meu filho tem só 7 anos. Não é cedo demais pra aprender sobre IA?"',
+    '"Ele já passa tempo demais na frente da tela. Isso não vai piorar?"',
   ],
   answer:
-    "Aqui, o foco não é aumentar o tempo de tela. É transformar o tempo de tela em tempo de aprendizado significativo.",
+    "A gente entende essa preocupação. Por isso, nosso foco nunca é aumentar o tempo de tela. É transformar esse tempo em aprendizado de verdade. Seu filho vai aprender a usar a tecnologia com propósito, não ficar navegando sem rumo.",
   closing: ["Você continua no controle.", "Seu filho ganha direção."],
 };
 
 /* ───── Practical Info (replaces Courses) ───── */
 export const PRACTICAL_INFO = {
   eyebrow: "Informações Práticas",
-  title: "Comece agora",
+  title: "Tudo que você precisa saber",
   items: [
-    { icon: "MapPin", label: "Curso presencial em Araçatuba e região" },
-    { icon: "User", label: "Idade: 9 a 14 anos" },
-    { icon: "Users", label: "Turmas reduzidas" },
+    { icon: "MapPin", label: "Aulas presenciais em Araçatuba e região" },
+    { icon: "User", label: "Para crianças de 7 a 12 anos" },
+    { icon: "Users", label: "Turmas pequenas, com atenção individualizada" },
     { icon: "Calendar", label: "Próxima turma: em breve" },
-    { icon: "Award", label: "Certificado ao final do programa" },
+    { icon: "Award", label: "Certificado de conclusão ao final" },
   ],
   closing:
-    "Vagas limitadas para manter a qualidade do acompanhamento.",
+    "As vagas são limitadas pra garantir que cada criança tenha o acompanhamento que merece.",
 };
 
 /* ───── Testimonials ───── */
@@ -176,20 +176,20 @@ export interface Testimonial {
 export const TESTIMONIALS: Testimonial[] = [
   {
     name: "Ana Paula M.",
-    role: "Mãe do Lucas, 10 anos",
-    text: "Meu filho adora as aulas! Ele já criou uma história interativa usando IA e apresentou para toda a família. Nunca vi ele tão empolgado com o aprendizado.",
+    role: "Mãe do Lucas, 8 anos",
+    text: "O Lucas chegou em casa contando que criou uma história usando IA e quis apresentar pra família inteira no jantar. Nunca vi ele tão animado com algo que aprendeu fora da escola.",
     initials: "AP",
   },
   {
     name: "Roberto S.",
-    role: "Pai da Sofia, 12 anos",
-    text: "A Sofia melhorou muito no raciocínio lógico e na criatividade. O curso ensina tecnologia de forma responsável, e isso nos deixa muito tranquilos como pais.",
+    role: "Pai da Sofia, 10 anos",
+    text: "A Sofia começou a questionar as coisas que via na internet. Outro dia me perguntou se uma notícia era verdade e foi pesquisar. Isso pra mim já valeu o curso todo.",
     initials: "RS",
   },
   {
     name: "Carla F.",
-    role: "Mãe do Pedro, 14 anos",
-    text: "O Pedro já está criando seus próprios projetos com IA. O curso despertou nele uma paixão por tecnologia que está direcionando sua escolha profissional.",
+    role: "Mãe do Pedro, 12 anos",
+    text: "O Pedro era viciado em celular e a gente vivia brigando. Depois do curso, ele começou a usar o tempo no computador pra criar coisas. A relação dele com a tecnologia mudou completamente.",
     initials: "CF",
   },
 ];
@@ -202,58 +202,58 @@ export interface FAQItem {
 
 export const FAQ_ITEMS: FAQItem[] = [
   {
-    question: "É necessário ter experiência prévia com tecnologia?",
+    question: "Meu filho precisa saber mexer em computador pra participar?",
     answer:
-      "Não! Nosso programa é projetado para todos os níveis. O conteúdo é adaptado para a faixa etária de 9 a 14 anos, começando do básico e progredindo gradualmente.",
+      "Não precisa, não! O curso é feito pra crianças de 7 a 12 anos de qualquer nível. A gente começa do zero e vai avançando no ritmo de cada turma.",
   },
   {
-    question: "Os cursos são presenciais ou online?",
+    question: "As aulas são presenciais ou online?",
     answer:
-      "Todos os nossos cursos são 100% presenciais em Araçatuba e região. Acreditamos que a interação face a face, a colaboração em grupo e o acompanhamento próximo dos instrutores são essenciais para o aprendizado.",
+      "Todas as aulas são presenciais, em Araçatuba e região. A gente acredita que criança aprende melhor quando está junto de outras crianças, com um professor do lado acompanhando de perto.",
   },
   {
-    question: "Qual a duração das aulas?",
+    question: "Quanto tempo dura cada aula?",
     answer:
-      "As aulas têm duração de 1h30 e acontecem uma vez por semana. O programa tem duração definida com certificado ao final.",
+      "Cada encontro tem 1h30 e acontece uma vez por semana. O programa tem duração definida e no final seu filho recebe um certificado.",
   },
   {
-    question: "Quantos alunos por turma?",
+    question: "Quantas crianças tem por turma?",
     answer:
-      "Trabalhamos com turmas reduzidas, garantindo atenção individualizada e melhor acompanhamento do progresso de cada estudante.",
+      "As turmas são pequenas de propósito. Assim, cada criança recebe atenção de verdade e a gente consegue acompanhar o progresso de cada um.",
   },
   {
-    question: "Como funciona a matrícula?",
+    question: "Como faço pra matricular meu filho?",
     answer:
-      "A matrícula pode ser feita entrando em contato pelo WhatsApp. Nossa equipe entrará em contato para confirmar os detalhes e agendar uma aula experimental gratuita.",
+      "É simples! Manda uma mensagem pra gente pelo WhatsApp e nossa equipe explica tudo. Você também pode agendar uma aula experimental gratuita pra seu filho conhecer o curso antes de se comprometer.",
   },
   {
-    question: "O curso oferece certificado?",
+    question: "Tem certificado?",
     answer:
-      "Sim! Ao concluir o programa, o aluno recebe um certificado de conclusão da Crescer com IA, reconhecendo as habilidades desenvolvidas.",
+      "Tem sim! Quando seu filho completa o programa, ele recebe um certificado da Crescer com IA reconhecendo tudo que aprendeu.",
   },
   {
-    question: "Meu filho pode fazer uma aula experimental?",
+    question: "Posso levar meu filho pra conhecer antes de matricular?",
     answer:
-      "Com certeza! Oferecemos uma aula experimental gratuita para que seu filho conheça nossa metodologia e nossos instrutores antes de efetuar a matrícula.",
+      "Claro! A gente oferece uma aula experimental gratuita justamente pra isso. Seu filho conhece os professores, a metodologia e já sai da primeira aula com vontade de voltar.",
   },
 ];
 
 /* ───── CTA ───── */
 export const CTA_CONTENT = {
-  title: "O futuro não espera.",
+  title: "Seu filho não precisa esperar o futuro chegar.",
   subtitle:
-    "E seu filho também não deveria esperar para se preparar.",
+    "Ele pode começar a se preparar agora, com quem entende de tecnologia e de crianças.",
   primaryCta: "Quero garantir a vaga do meu filho",
   secondaryCta: "Falar com a equipe pelo WhatsApp",
 };
 
 /* ───── Lead Capture ───── */
 export const LEAD_CAPTURE = {
-  title: "Guia gratuito para pais",
+  title: "Guia gratuito pra você, pai e mãe",
   description:
-    'Baixe gratuitamente o material: "Como preparar seu filho para a era da Inteligência Artificial"',
+    'Baixe de graça o material "Como preparar seu filho para a era da Inteligência Artificial", com dicas práticas que você pode aplicar em casa hoje.',
   subtitle:
-    "Receba orientações práticas para aplicar em casa enquanto decide sobre o curso presencial.",
+    "Mesmo que você ainda esteja em dúvida sobre o curso, esse guia já vai te ajudar.",
   cta: "Baixar guia gratuito",
 };
 
@@ -272,5 +272,5 @@ export const CONTACT = {
 };
 
 export const WHATSAPP_URL = `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(
-  "Olá! Gostaria de saber mais sobre os cursos de IA para crianças da Crescer com IA."
+  "Olá! Gostaria de saber mais sobre o curso de IA para crianças da Crescer com IA."
 )}`;

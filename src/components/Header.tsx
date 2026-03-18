@@ -28,7 +28,7 @@ export default function Header() {
           <a href="#" className="flex items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/logo-horizontal.jpeg"
+              src="/logo-horizontal.webp"
               alt="Crescer com IA"
               width={160}
               height={53}
