@@ -36,9 +36,7 @@ export default function Header() {
             <img
               src="/logo-horizontal.webp"
               alt="Crescer com IA"
-              width={160}
-              height={53}
-              className="h-8 w-auto sm:h-11 rounded transition-all duration-300"
+              className="max-h-8 w-auto sm:max-h-11 rounded transition-all duration-300"
             />
           </a>
 
