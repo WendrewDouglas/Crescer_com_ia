@@ -7,12 +7,12 @@ import { FAQ_ITEMS } from "@/lib/constants";
 
 export default function FAQ() {
   return (
-    <section id="faq" className="py-20 sm:py-28">
+    <section id="faq" className="py-16 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Perguntas Frequentes"
           title="Tire suas dúvidas"
-          subtitle="Tudo o que você precisa saber sobre nossos cursos de IA para crianças e adolescentes."
+          subtitle="Tudo o que você precisa saber sobre nossos cursos de IA para crianças."
         />
 
         <div

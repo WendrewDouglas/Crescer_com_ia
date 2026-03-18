@@ -16,6 +16,12 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
   return (
     <header
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
@@ -32,7 +38,7 @@ export default function Header() {
               alt="Crescer com IA"
               width={160}
               height={53}
-              className="rounded transition-all duration-300"
+              className="h-10 w-auto sm:h-auto sm:w-[160px] rounded transition-all duration-300"
             />
           </a>
 
@@ -56,38 +62,61 @@ export default function Header() {
 
           {/* Mobile Hamburger */}
           <button
-            className="cursor-pointer md:hidden"
+            className="relative z-50 cursor-pointer p-2 -mr-2 md:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menu de navegação"
             aria-expanded={mobileOpen}
           >
             {mobileOpen ? (
-              <X className={`h-6 w-6 ${scrolled ? "text-foreground" : "text-white"}`} />
+              <X className={`h-6 w-6 ${scrolled || mobileOpen ? "text-foreground" : "text-white"}`} />
             ) : (
               <Menu className={`h-6 w-6 ${scrolled ? "text-foreground" : "text-white"}`} />
             )}
           </button>
         </div>
-
-        {/* Mobile Nav */}
-        {mobileOpen && (
-          <nav aria-label="Menu de navegação" className="flex flex-col gap-4 rounded-2xl bg-background p-6 shadow-xl md:hidden">
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="text-base font-medium text-foreground/80 transition-colors hover:text-primary"
-              >
-                {link.label}
-              </a>
-            ))}
-            <Button href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="mt-2 w-full">
-              Inscreva-se
-            </Button>
-          </nav>
-        )}
       </Container>
+
+      {/* Mobile Nav Overlay */}
+      <div
+        className={`fixed inset-0 top-16 bg-black/40 transition-opacity duration-300 md:hidden ${
+          mobileOpen ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
+        onClick={() => setMobileOpen(false)}
+        aria-hidden="true"
+      />
+
+      {/* Mobile Nav Panel */}
+      <div
+        className={`fixed top-16 right-0 left-0 mx-4 transition-all duration-300 md:hidden ${
+          mobileOpen
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-4 pointer-events-none opacity-0"
+        }`}
+      >
+        <nav
+          aria-label="Menu de navegação"
+          className="flex flex-col gap-1 rounded-2xl bg-background p-5 shadow-xl"
+        >
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileOpen(false)}
+              className="rounded-xl px-4 py-3 text-base font-medium text-foreground/80 transition-colors hover:bg-primary/5 hover:text-primary active:bg-primary/10"
+            >
+              {link.label}
+            </a>
+          ))}
+          <Button
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 w-full"
+          >
+            Inscreva-se
+          </Button>
+        </nav>
+      </div>
     </header>
   );
 }

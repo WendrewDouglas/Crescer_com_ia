@@ -4,28 +4,28 @@ import { DEVELOPMENT_AREAS, DEVELOPMENT_CLOSING } from "@/lib/constants";
 
 export default function Benefits() {
   return (
-    <section id="beneficios" className="bg-muted py-20 sm:py-28">
+    <section id="beneficios" className="bg-muted py-16 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="O que seu filho desenvolve"
           title="Desenvolvimento integral na era digital"
         />
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4">
           {DEVELOPMENT_AREAS.map((area) => {
             const Icon = area.icon;
             return (
               <div
                 key={area.title}
-                className="group rounded-2xl border border-border bg-background p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                className="group rounded-2xl border border-border bg-background p-4 sm:p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
               >
-                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary">
-                  <Icon className="h-7 w-7 text-primary transition-colors group-hover:text-white" />
+                <div className="mx-auto mb-3 sm:mb-4 flex h-11 w-11 sm:h-14 sm:w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary">
+                  <Icon className="h-5 w-5 sm:h-7 sm:w-7 text-primary transition-colors group-hover:text-white" />
                 </div>
-                <h3 className="mb-2 text-xl font-bold text-foreground">
+                <h3 className="mb-1.5 sm:mb-2 text-base sm:text-xl font-bold text-foreground">
                   {area.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
+                <p className="text-xs sm:text-sm leading-relaxed text-muted-foreground">
                   {area.description}
                 </p>
               </div>
@@ -33,7 +33,7 @@ export default function Benefits() {
           })}
         </div>
 
-        <p className="mx-auto mt-12 max-w-2xl text-center text-lg font-semibold text-foreground">
+        <p className="mx-auto mt-8 sm:mt-12 max-w-2xl text-center text-base sm:text-lg font-semibold text-foreground">
           {DEVELOPMENT_CLOSING}
         </p>
       </Container>

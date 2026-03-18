@@ -5,7 +5,7 @@ import { TESTIMONIALS } from "@/lib/constants";
 
 export default function Testimonials() {
   return (
-    <section id="depoimentos" className="bg-muted py-20 sm:py-28">
+    <section id="depoimentos" className="bg-muted py-16 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Depoimentos"
@@ -13,14 +13,14 @@ export default function Testimonials() {
           subtitle="Famílias que já transformaram o futuro de seus filhos com nossos cursos."
         />
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((t) => (
             <div
               key={t.name}
-              className="rounded-2xl border border-border bg-background p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+              className="rounded-2xl border border-border bg-background p-5 sm:p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
-              <Quote className="mb-4 h-8 w-8 text-primary/30" />
-              <p className="mb-6 text-sm leading-relaxed text-muted-foreground italic">
+              <Quote className="mb-3 sm:mb-4 h-6 w-6 sm:h-8 sm:w-8 text-primary/30" />
+              <p className="mb-5 sm:mb-6 text-sm leading-relaxed text-muted-foreground italic">
                 &ldquo;{t.text}&rdquo;
               </p>
               <div className="flex items-center gap-3">

@@ -14,10 +14,10 @@ export default function SectionHeading({
   light = false,
 }: SectionHeadingProps) {
   return (
-    <div className={`mb-12 ${centered ? "text-center" : ""}`}>
+    <div className={`mb-8 sm:mb-12 ${centered ? "text-center" : ""}`}>
       {eyebrow && (
         <span
-          className={`font-tech mb-3 inline-block text-sm font-semibold uppercase tracking-widest ${
+          className={`font-tech mb-2 inline-block text-xs sm:text-sm font-semibold uppercase tracking-widest ${
             light ? "text-accent" : "text-primary"
           }`}
         >
@@ -25,7 +25,7 @@ export default function SectionHeading({
         </span>
       )}
       <h2
-        className={`text-3xl font-bold tracking-tight sm:text-4xl ${
+        className={`text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl ${
           light ? "text-white" : "text-foreground"
         }`}
       >
@@ -33,7 +33,7 @@ export default function SectionHeading({
       </h2>
       {subtitle && (
         <p
-          className={`mx-auto mt-4 max-w-2xl text-lg ${
+          className={`mx-auto mt-3 max-w-2xl text-base sm:text-lg ${
             light ? "text-white/80" : "text-muted-foreground"
           }`}
         >

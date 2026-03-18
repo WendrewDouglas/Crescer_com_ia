@@ -31,7 +31,7 @@ export default function Button({
   children,
   ...props
 }: ButtonProps) {
-  const base = `inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm transition-all duration-200 cursor-pointer ${variantStyles[variant]} ${className}`;
+  const base = `inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-base sm:px-6 sm:py-3 sm:text-sm transition-all duration-200 cursor-pointer ${variantStyles[variant]} ${className}`;
 
   if ("href" in props && props.href !== undefined) {
     const { href, ...rest } = props as ButtonAsAnchor;

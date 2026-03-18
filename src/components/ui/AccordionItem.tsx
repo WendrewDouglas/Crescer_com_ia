@@ -27,9 +27,9 @@ export default function AccordionItem({ question, answer }: AccordionItemProps) 
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-controls={panelId}
-          className="flex w-full items-center justify-between gap-4 py-5 text-left cursor-pointer"
+          className="flex w-full items-center justify-between gap-3 py-4 sm:py-5 text-left cursor-pointer"
         >
-          <span className="text-lg font-semibold text-foreground" itemProp="name">
+          <span className="text-base sm:text-lg font-semibold text-foreground" itemProp="name">
             {question}
           </span>
           <ChevronDown
@@ -45,14 +45,14 @@ export default function AccordionItem({ question, answer }: AccordionItemProps) 
         role="region"
         aria-labelledby={buttonId}
         className={`grid transition-all duration-300 ${
-          open ? "grid-rows-[1fr] pb-5" : "grid-rows-[0fr]"
+          open ? "grid-rows-[1fr] pb-4 sm:pb-5" : "grid-rows-[0fr]"
         }`}
         itemScope
         itemProp="acceptedAnswer"
         itemType="https://schema.org/Answer"
       >
         <div className="overflow-hidden">
-          <p className="text-muted-foreground leading-relaxed" itemProp="text">
+          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed" itemProp="text">
             {answer}
           </p>
         </div>

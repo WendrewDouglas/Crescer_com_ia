@@ -14,7 +14,7 @@ const iconMap: Record<string, React.ElementType> = {
 
 export default function PracticalInfo() {
   return (
-    <section id="informacoes" className="py-20 sm:py-28">
+    <section id="informacoes" className="py-16 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow={PRACTICAL_INFO.eyebrow}
@@ -22,17 +22,17 @@ export default function PracticalInfo() {
         />
 
         <div className="mx-auto max-w-xl">
-          <div className="rounded-2xl border border-border bg-background p-8 shadow-md">
-            <ul className="space-y-5">
+          <div className="rounded-2xl border border-border bg-background p-5 sm:p-8 shadow-md">
+            <ul className="space-y-4 sm:space-y-5">
               {PRACTICAL_INFO.items.map((item) => {
                 const Icon = iconMap[item.icon];
                 return (
                   <li
                     key={item.label}
-                    className="flex items-center gap-4 text-lg text-foreground"
+                    className="flex items-center gap-3 sm:gap-4 text-base sm:text-lg text-foreground"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                      <Icon className="h-5 w-5 text-primary" />
+                    <div className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                      <Icon className="h-4.5 w-4.5 sm:h-5 sm:w-5 text-primary" />
                     </div>
                     {item.label}
                   </li>
@@ -40,7 +40,7 @@ export default function PracticalInfo() {
               })}
             </ul>
 
-            <p className="mt-6 text-center text-sm font-medium text-primary">
+            <p className="mt-5 sm:mt-6 text-center text-sm font-medium text-primary">
               {PRACTICAL_INFO.closing}
             </p>
 
@@ -48,7 +48,7 @@ export default function PracticalInfo() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 w-full"
+              className="mt-5 sm:mt-6 w-full"
             >
               Garantir minha vaga
             </Button>

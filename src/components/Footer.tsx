@@ -4,11 +4,11 @@ import { NAV_LINKS, CONTACT, WHATSAPP_URL, FOOTER_TAGLINE } from "@/lib/constant
 
 export default function Footer() {
   return (
-    <footer className="bg-foreground pt-16 pb-8 text-white/70">
+    <footer className="bg-foreground pt-12 sm:pt-16 pb-8 text-white/70">
       <Container>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
-          <div>
+          <div className="text-center sm:text-left">
             <a href="#" className="mb-4 inline-block">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -16,15 +16,15 @@ export default function Footer() {
                 alt="Crescer com IA"
                 width={180}
                 height={60}
-                className="rounded"
+                className="mx-auto sm:mx-0 h-12 w-auto sm:h-auto sm:w-[180px] rounded"
               />
             </a>
             <p className="mt-2 text-sm leading-relaxed">{FOOTER_TAGLINE}</p>
           </div>
 
           {/* Navigation */}
-          <nav aria-label="Links do rodapé">
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+          <nav aria-label="Links do rodapé" className="text-center sm:text-left">
+            <h4 className="mb-3 sm:mb-4 text-sm font-semibold uppercase tracking-wider text-white">
               Navegação
             </h4>
             <ul className="space-y-2">
@@ -42,11 +42,11 @@ export default function Footer() {
           </nav>
 
           {/* Contact */}
-          <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+          <div className="text-center sm:text-left">
+            <h4 className="mb-3 sm:mb-4 text-sm font-semibold uppercase tracking-wider text-white">
               Contato
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-3 inline-flex flex-col items-start">
               <li className="flex items-start gap-2 text-sm">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0" />
                 <a
@@ -86,7 +86,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm">
+        <div className="mt-10 sm:mt-12 border-t border-white/10 pt-6 sm:pt-8 text-center text-sm">
           <div className="mb-2">
             <a
               href="/privacidade"
