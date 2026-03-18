@@ -38,7 +38,7 @@ export default function Header() {
               alt="Crescer com IA"
               width={160}
               height={53}
-              className="h-10 w-auto sm:h-auto sm:w-[160px] rounded transition-all duration-300"
+              className="h-8 w-auto sm:h-11 rounded transition-all duration-300"
             />
           </a>
 
